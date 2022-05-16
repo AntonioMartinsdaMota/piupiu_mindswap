@@ -12,7 +12,7 @@ const PostSchema = new mongoose.Schema({
         required: [true, "Please add content"]
     },
     user: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.ObjectId,
         ref: "User",
         required: [true, "Please add a user"]
     },
