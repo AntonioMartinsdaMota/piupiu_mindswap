@@ -4,7 +4,11 @@ import User from '../../../models/User';
 dbConnect();
 
 export default async (req, res) => {
-    const user = await User.findById(req.session.userId);
+    const cookie = req.headers.cookie;
+    const user = await User.findOne({ cookie });
     res.status(200).json(user);
-}
+};
+
+
+
 
