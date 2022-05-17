@@ -47,8 +47,8 @@ function LoginForm() {
     <div id="hhhhh" className={styles.mainLogin}>
       <div className={styles.boxLogin}>
         <h2 className={styles.text}>Login</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-control">
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.formControl}>
             <label className={styles.userLabel} htmlFor="username">
               Username
             </label>
