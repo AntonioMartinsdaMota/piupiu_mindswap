@@ -44,18 +44,17 @@ function PostSubmitForm() {
 
   return (
     <div>
-      <h1>Post Submit Form</h1>
       <form>
-        <label>Title</label>
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label>Content</label>
+        <br/>
         <input
           type="text"
           value={content}
+          placeholder="What are you thinking?"
           onChange={(e) => setContent(e.target.value)}
         />
 

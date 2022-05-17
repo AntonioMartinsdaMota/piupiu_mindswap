@@ -6,6 +6,7 @@ function PostList() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     fetch("/api/posts")
       .then((res) => res.json())
@@ -22,12 +23,13 @@ function PostList() {
         <div>Loading...</div>
       ) : (
 
-        <div>
+        <div className="Post">
           {posts.map((post) => (
             <div key={post.id}>
               <h2>{post.title}</h2>
               <p>{post.content}</p>
               <p>{post.user}</p>
+              <button> 👍 </button>
             </div>
           ))}
         </div>
