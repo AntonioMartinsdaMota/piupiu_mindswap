@@ -1,3 +1,4 @@
+import Router from "next/router";
 import { useState,useEffect } from "react";
 
 function SignUpForm(){
@@ -26,6 +27,8 @@ function SignUpForm(){
         }else{
             setSuccess(data.message);
             setLoading(false);
+            alert("Successfully registered");
+            Router.push("/");
         }
     }
 
@@ -45,8 +48,11 @@ function SignUpForm(){
             setError("Passwords do not match");
         }else{
             postUser();
+            }
+
         }
-    }
+
+
 
     return(
         <div className="container">
