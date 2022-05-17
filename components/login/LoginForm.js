@@ -22,22 +22,21 @@ function LoginForm() {
     validateUser(username, password);
 
     async function validateUser(username, password) {
-      const response = await fetch("/api/users", {
-        method: "GET",
+      const response = await fetch("/api/login", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
       });
-      const json = await response.json();
-      const userArray = await json.data;
-      const user = await userArray.find(
-        (user) => user.name === username && user.password === password
-      );
-      if (user) {
-        setLoggedIn(true);
+
+      if (response.ok) {
         Router.push("/home");
       } else {
-        setError("Invalid credentials");
+        setError("Invalid username or password");
       }
       setLoading(false);
     }
