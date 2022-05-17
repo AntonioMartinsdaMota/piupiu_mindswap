@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { getServerSideProps } from "next";
+// import { getServerSideProps } from "next";
+import styles from "./PostSubmit.module.css";
 
 function PostSubmitForm() {
   const [title, setTitle] = useState("");
@@ -9,29 +10,22 @@ function PostSubmitForm() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    
-
     fetch("/api/posts", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            title,
-            content,
-            user,
-        }),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title,
+        content,
+        user,
+      }),
     })
-        .then((res) => res.json())
-        .then((json) => {
-            console.log(json);
-        }
-
-        );
-    }
-
-  
-  
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json);
+      });
+  }
 
   useEffect(() => {
     const getUser = async () => {
@@ -45,25 +39,24 @@ function PostSubmitForm() {
   }, []);
 
   return (
-    <div>
-      <form>
+    <div className={styles.box}>
+      <form className={styles.post}>
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <br/>
+        <br />
         <input
           type="text"
           value={content}
           placeholder="What are you thinking?"
           onChange={(e) => setContent(e.target.value)}
         />
-
         <button onClick={handleSubmit}>Submit</button>
-        </form>
+      </form>
     </div>
-    );
+  );
 }
-  
+
 export default PostSubmitForm;
