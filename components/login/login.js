@@ -1,7 +1,7 @@
 function Login() {
     function handleClick(event) {
       event.preventDefault();
-      console.log("going to the dtabase");
+      console.log("going to the database");
     }
   
     return (
