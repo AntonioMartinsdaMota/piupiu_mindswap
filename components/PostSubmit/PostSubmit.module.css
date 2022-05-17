@@ -1,8 +1,18 @@
 .box{
-
+    position: relative;
     display: flex;
+    justify-content: space-around;
     margin: 5%;
     border: 1px solid grey;
     border-radius: 10px;
     justify-content: stretch;
+}
+
+.post{
+    display: flex;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
 }
