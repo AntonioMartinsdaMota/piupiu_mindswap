@@ -9,6 +9,8 @@ function PostSubmitForm() {
   function handleSubmit(e) {
     e.preventDefault();
 
+    
+
     fetch("/api/posts", {
         method: "POST",
         headers: {
