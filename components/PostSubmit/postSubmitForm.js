@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getServerSideProps } from "next";
+import styles from "./PostSubmit.module.css";
 
 function PostSubmitForm() {
   const [title, setTitle] = useState("");
@@ -45,7 +46,7 @@ function PostSubmitForm() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.box}>
       <form>
         <input
           type="text"

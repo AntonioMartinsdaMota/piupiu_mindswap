@@ -1,5 +1,5 @@
-import PostList from "../../components/PostList/postList";
-import PostSubmitForm from "../../components/PostSubmit/postSubmitForm";
+import PostList from "../../components/PostList/PostList";
+import PostSubmitForm from "../../components/PostSubmit/PostSubmitForm";
 import PageHeader from "../../components/Header/FeedHeader";
 import Footer from "../../components/Footer";
 
