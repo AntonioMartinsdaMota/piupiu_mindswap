@@ -53,10 +53,12 @@ function SignUpForm() {
   return (
     <div className={styles.boxLogin}>
       <div className={styles.cardLogin}>
-        <img
-          src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
-          alt="image logo"
-        ></img>
+        <div className={styles.imgChange}>
+          <img
+            src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
+            alt="image logo"
+          ></img>
+        </div>
 
         <h2 className={styles.text}>#piupiu</h2>
 
@@ -103,7 +105,7 @@ function SignUpForm() {
               {loading ? "Loading..." : "SIGN UP"}
             </button>
 
-            {error && <p className="error">{error}</p>}
+            {error && <p className={styles.error}>{error}</p>}
 
             <a className={styles.btnSign} href="/signup">
               {" "}
@@ -115,7 +117,7 @@ function SignUpForm() {
           <p>Powered by MindSwap</p>
         </footer>
 
-        {error && <div className="alert alert-danger">{error}</div>}
+        {/* {error && <div className="alert alert-danger">{error}</div>} */}
         {success && <div className="alert alert-success">{success}</div>}
         {loading && <div className="alert alert-info">Loading...</div>}
       </div>

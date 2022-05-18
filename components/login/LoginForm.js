@@ -46,10 +46,12 @@ function LoginForm() {
   return (
     <div className={styles.boxLogin}>
       <div className={styles.cardLogin}>
-        <img
-          src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
-          alt="image logo"
-        ></img>
+        <div className={styles.imgChange}>
+          <img
+            src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
+            alt="image logo"
+          ></img>
+        </div>
 
         <h2 className={styles.text}>#piupiu</h2>
 
@@ -81,7 +83,7 @@ function LoginForm() {
               {loading ? "Loading..." : "Log in"}
             </button>
 
-            {error && <p className="error">{error}</p>}
+            {error && <p className={styles.error}>{error}</p>}
 
             <a className={styles.btnSign} href="/signup">
               {" "}
