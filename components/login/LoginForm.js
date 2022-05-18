@@ -44,50 +44,57 @@ function LoginForm() {
   };
 
   return (
-    <div id="hhhhh" className={styles.mainLogin}>
-      <div className={styles.boxLogin}>
-        <h2 className={styles.text}>Login</h2>
+    <div className={styles.boxLogin}>
+      <div className={styles.cardLogin}>
+        <div className={styles.imgChange}>
+          <img
+            src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
+            alt="image logo"
+          ></img>
+        </div>
+
+        <h2 className={styles.text}>#piupiu</h2>
+
         <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.formControl}>
-            <label className={styles.userLabel} htmlFor="username">
-              Username
-            </label>
-            <input
-              className={styles.inputText}
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="form-control">
-            <label className={styles.passLabel} htmlFor="password">
-              Password
-            </label>
-            <input
-              className={styles.inputPass}
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="form-actions">
+          <input
+            className={styles.inputText}
+            placeholder="Username"
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+
+          <input
+            className={styles.inputPass}
+            placeholder="Password"
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <div className={styles.formActions}>
             <button
               className={styles.btnLogin}
               type="submit"
               disabled={loading}
             >
-              {loading ? "Loading..." : "Login"}
+              {loading ? "Loading..." : "Log in"}
             </button>
-            {error && <p className="error">{error}</p>}
+
+            {error && <p className={styles.error}>{error}</p>}
+
+            <a className={styles.btnSign} href="/signup">
+              {" "}
+              Don't have an account?
+            </a>
           </div>
-          <a href="/signup">
-            <button className={styles.btnSign} type="button">
-              SignUp
-            </button>
-          </a>
         </form>
+
+        <footer className={styles.footer}>
+          <p>Powered by MindSwap</p>
+        </footer>
       </div>
     </div>
   );

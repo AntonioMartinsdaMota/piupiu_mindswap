@@ -27,7 +27,7 @@
 
 .text {
   font-style: italic;
-  font-size: 64px;
+  font-size: 32px;
   color: #ffffff;
 }
 
@@ -66,8 +66,7 @@
 .btnLogin {
   width: 80%;
   padding: 12px 0px;
-  margin: 8px 0px;
-  border: none;
+  margin: 16px;
   border-radius: 25px;
   outline: none;
   text-transform: uppercase;
@@ -81,7 +80,6 @@
 
 .btnSign {
   padding: 12px 0px;
-  margin: 8px 0px;
   border: none;
   border-radius: 25px;
   outline: none;
@@ -97,15 +95,11 @@
   margin-top: 16px;
 }
 
-.error {
-  color: #e66969;
-}
-
 .footer {
   bottom: 0;
   color: #ffffff;
   opacity: 0.5;
-  margin-top: 69px;
+  margin-top: 32px;
   font-size: 15px;
 }
 
@@ -128,4 +122,8 @@
 
 .imgChange:hover img {
   transform: scale(1.2);
+}
+
+.error {
+  color: #e66969;
 }
