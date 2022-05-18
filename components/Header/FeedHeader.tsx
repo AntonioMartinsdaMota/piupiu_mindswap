@@ -1,25 +1,34 @@
 import styles from "./Header.module.css";
+import { useState } from "react";
 
 function PageHeader() {
+  const [bar, setbar] = useState(false);
+
+  function togle() {
+    setbar(!bar);
+  }
+
   return (
     <>
       <div className={styles.logo}>
         <img
           src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
-          height={60}
+          height={47}
           alt=""
         />
         <input
-          className={styles.searchbar}
+          id="searchbar"
+          className={bar ? styles.search : styles.searchbar}
           type="text"
           placeholder="🔍  Search"
         />
         <img
           className={styles.icon}
+          onClick={togle}
           src="https://i.ibb.co/LNv9shj/search.png"
           height={20}
           alt=""
-        />
+        />{" "}
         <img
           className={styles.icon}
           src="https://i.ibb.co/Qd7Q4Vn/settings.png"

@@ -16,7 +16,7 @@ function PostSubmitForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title,
+        // title,
         content,
         user,
       }),
@@ -58,6 +58,9 @@ function PostSubmitForm() {
           <img src="https://i.ibb.co/hKyfFrs/botao.png" alt="" />
         </button>
       </form>
+      <div className={styles.footer}>
+        <p>™ Developed By MindSwap 2022</p>
+      </div>
     </div>
   );
 }

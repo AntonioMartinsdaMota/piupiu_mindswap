@@ -1,4 +1,4 @@
-import PostList from "../../components/PostList/postList";
+import PostList from "../../components/PostList/Postlist";
 import PostSubmitForm from "../../components/PostSubmit/PostSubmitForm";
 import PageHeader from "../../components/Header/FeedHeader";
 import Footer from "../../components/Footer";
@@ -10,7 +10,6 @@ function Home() {
       <PageHeader />
       <PostSubmitForm />
       <PostList />
-      <Footer />
     </div>
   );
 }

@@ -1,12 +1,11 @@
-
+import styles from "./PostList.module.css";
 import { useState, useEffect } from "react";
 
-
 function PostList() {
-
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const score = 0;
 
   useEffect(() => {
     fetch("/api/posts")
@@ -15,22 +14,19 @@ function PostList() {
         setPosts(json.data);
         setLoading(false);
       });
-  }
-  , [posts]);
+  }, [posts]);
 
   return (
-    <div>
+    <div className={styles.frame}>
       {loading ? (
         <div>Loading...</div>
       ) : (
-
         <div className="Post">
-          {posts.map((post) => (
-            <div key={post.id}>
-              <h2>{post.title}</h2>
+          {posts.map((post, index) => (
+            <div className={styles.comment} key={index}>
+              <h2 className={styles.h1}>{post.title}</h2>
               <p>{post.content}</p>
               <p>{post.user}</p>
-              <button> 👍 </button>
             </div>
           ))}
         </div>
@@ -40,6 +36,3 @@ function PostList() {
 }
 
 export default PostList;
-
-
-  
