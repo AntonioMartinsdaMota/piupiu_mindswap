@@ -4,7 +4,11 @@ function PageHeader() {
   return (
     <>
       <div className={styles.logo}>
-        <img src="https://i.ibb.co/gm9437T/logo-Final.png" height={60} alt="" />
+        <img
+          src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
+          height={60}
+          alt=""
+        />
         <input
           className={styles.searchbar}
           type="text"

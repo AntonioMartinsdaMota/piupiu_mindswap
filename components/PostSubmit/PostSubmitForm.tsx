@@ -41,21 +41,20 @@ function PostSubmitForm() {
   return (
     <div className={styles.box}>
       <form className={styles.post}>
-        <input
+        {/* <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <br />
-        <input
-          type="text"
-          className={styles.searchbar}
+        <br /> */}
+        <textarea
+          // type="text"
+          className={styles.text}
           value={content}
           placeholder="whats new?"
           onChange={(e) => setContent(e.target.value)}
         />
         <button className={styles.submitButton} onClick={handleSubmit}>
-          {" "}
           <img src="https://i.ibb.co/hKyfFrs/botao.png" alt="" />
         </button>
       </form>
