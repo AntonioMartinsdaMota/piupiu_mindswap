@@ -16,7 +16,7 @@ function PostSubmitForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title,
+        // title,
         content,
         user,
       }),
@@ -41,20 +41,26 @@ function PostSubmitForm() {
   return (
     <div className={styles.box}>
       <form className={styles.post}>
-        <input
+        {/* <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <br />
-        <input
-          type="text"
+        <br /> */}
+        <textarea
+          // type="text"
+          className={styles.text}
           value={content}
-          placeholder="What are you thinking?"
+          placeholder="whats new?"
           onChange={(e) => setContent(e.target.value)}
         />
-        <button onClick={handleSubmit}>Submit</button>
+        <button className={styles.submitButton} onClick={handleSubmit}>
+          <img src="https://i.ibb.co/hKyfFrs/botao.png" alt="" />
+        </button>
       </form>
+      <div className={styles.footer}>
+        <p>™ Developed By MindSwap 2022</p>
+      </div>
     </div>
   );
 }

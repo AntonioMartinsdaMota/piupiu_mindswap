@@ -1,0 +1,10 @@
+
+.main{
+    flex-direction: row;
+    justify-self: center;
+    align-self: center;
+    width: 98vw;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
