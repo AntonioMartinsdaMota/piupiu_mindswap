@@ -4,11 +4,29 @@ function PageHeader() {
   return (
     <>
       <div className={styles.logo}>
-        <img src="https://i.ibb.co/3c94bFF/logo.png" height={75} alt="" />
+        <img src="https://i.ibb.co/gm9437T/logo-Final.png" height={60} alt="" />
         <input
           className={styles.searchbar}
           type="text"
           placeholder="🔍  Search"
+        />
+        <img
+          className={styles.icon}
+          src="https://i.ibb.co/LNv9shj/search.png"
+          height={20}
+          alt=""
+        />
+        <img
+          className={styles.icon}
+          src="https://i.ibb.co/Qd7Q4Vn/settings.png"
+          height={20}
+          alt=""
+        />
+        <img
+          className={styles.icon}
+          src="https://i.ibb.co/DYJjNyN/user.png"
+          height={20}
+          alt=""
         />
       </div>
     </>

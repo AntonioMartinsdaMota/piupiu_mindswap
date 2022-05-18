@@ -49,11 +49,15 @@ function PostSubmitForm() {
         <br />
         <input
           type="text"
+          className={styles.searchbar}
           value={content}
-          placeholder="What are you thinking?"
+          placeholder="whats new?"
           onChange={(e) => setContent(e.target.value)}
         />
-        <button onClick={handleSubmit}>Submit</button>
+        <button className={styles.submitButton} onClick={handleSubmit}>
+          {" "}
+          <img src="https://i.ibb.co/hKyfFrs/botao.png" alt="" />
+        </button>
       </form>
     </div>
   );
