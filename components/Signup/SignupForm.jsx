@@ -1,5 +1,7 @@
 import Router from "next/router";
 import { useState,useEffect } from "react";
+import styles from "./signup.module.css";
+
 
 function SignUpForm(){
     const [name,setName] = useState("");
@@ -55,7 +57,7 @@ function SignUpForm(){
 
 
     return(
-        <div className="container">
+        <div className={styles.containerrrrrrrrrrrrrrr}>
             <div className="row">
                 <div className="col-md-6 offset-md-3">
                     <h1 className="text-center">Sign Up</h1>
