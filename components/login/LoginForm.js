@@ -15,7 +15,7 @@ function LoginForm() {
       setPassword("");
     }
   }, [loggedIn]);
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
