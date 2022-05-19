@@ -16,6 +16,7 @@ function CommentSubmitForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(content);
     
 
     try{
@@ -38,7 +39,7 @@ function CommentSubmitForm(props) {
       console.log(err);
     }
 
-    // refreshPage();
+    refreshPage();
   }
 
   return (
