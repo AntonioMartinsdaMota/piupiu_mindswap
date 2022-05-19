@@ -31,12 +31,14 @@ function PostSubmitForm() {
     const getUser = async () => {
       const response = await fetch("/api/users/me");
       const json = await response.json();
-      const user = json._id;
+      const user = json.name;
       setUser(user);
     };
 
     getUser();
   }, []);
+
+  console.log(user);
 
   return (
     <div className={styles.box}>
