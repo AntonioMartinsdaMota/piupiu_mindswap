@@ -5,7 +5,8 @@ dbConnect();
 
 export default async (req, res) => {
 
-   const {id} = req.params;
+   const {id} = req.query;
+   console.log(id);
 
     const method = req.method;
 
@@ -35,6 +36,8 @@ export default async (req, res) => {
             });
     }
 }
+
+
 
 
 
