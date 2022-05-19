@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./button.module.css";
 
 function LikeButton() {
   const [like, setLike] = useState(false);
@@ -8,7 +9,7 @@ function LikeButton() {
   }
 
   return (
-    <button onClick={toggle}>
+    <button className={styles.like} onClick={toggle}>
       {" "}
       <img
         src={
@@ -16,6 +17,7 @@ function LikeButton() {
             ? "https://i.ibb.co/jLhSDMH/like-Toggle-On.png"
             : "https://i.ibb.co/FwJxyh9/like-Toggle-Off.png"
         }
+        height={30}
         alt=""
       />
     </button>
