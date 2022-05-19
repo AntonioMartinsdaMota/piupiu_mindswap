@@ -18,7 +18,7 @@ function Avatar (){
 
     return(
         <div className="avatar">
-            <img src="https://yt3.ggpht.com/ytc/AKedOLQZzLP2_xx8UhD6Y54T_b6rB6JrLrFWIAr0Wb6weQ=s900-c-k-c0x00ffffff-no-rj"alt=""/>
+            <img src={avatar} alt="avatar" />
         </div>
     );
 
