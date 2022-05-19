@@ -105,12 +105,12 @@ function SignUpForm() {
               {loading ? "Loading..." : "SIGN UP"}
             </button>
 
-            {error && <p className={styles.error}>{error}</p>}
-
             <a className={styles.btnSign} href="/signup">
               {" "}
               I already have an account
             </a>
+
+            {error && <p className={styles.error}>{error}</p>}
           </div>
         </form>
         <footer className={styles.footer}>
