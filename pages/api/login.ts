@@ -20,7 +20,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         return res.status(400).end();
     }
 
-    const token = user.email
+    const token = user.email;
 
     res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Max-Age=${60 * 60 * 24 * 7}`);
 

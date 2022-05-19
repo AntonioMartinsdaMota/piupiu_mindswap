@@ -1,11 +1,13 @@
+import { Router } from "next/router";
 import { useState, useEffect } from "react";
-// import { getServerSideProps } from "next";
 import styles from "./PostSubmit.module.css";
 
 function PostSubmitForm() {
-  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [user, setUser] = useState("");
+
+  function refreshPage() {
+    window.location.reload();
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,45 +18,46 @@ function PostSubmitForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title,
         content,
-        user,
       }),
     })
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
       });
+
+    refreshPage();
   }
 
-  useEffect(() => {
-    const getUser = async () => {
-      const response = await fetch("/api/users/me");
-      const json = await response.json();
-      const user = json._id;
-      setUser(user);
-    };
+  // useEffect(() => {
+  //   const getUser = async () => {
+  //     const response = await fetch("/api/users/me");
+  //     const json = await response.json();
+  //     const user = json._id;
+  //     setUser(user);
+  //   };
 
-    getUser();
-  }, []);
+  //   getUser();
+  // }, []);
+
+  // console.log(user);
 
   return (
     <div className={styles.box}>
       <form className={styles.post}>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <br />
-        <input
-          type="text"
+        <textarea
+          className={styles.text}
           value={content}
-          placeholder="What are you thinking?"
+          placeholder="whats new?"
           onChange={(e) => setContent(e.target.value)}
         />
-        <button onClick={handleSubmit}>Submit</button>
+        <button className={styles.submitButton} onClick={handleSubmit}>
+          <img src="https://i.ibb.co/hKyfFrs/botao.png" alt="" />
+        </button>
       </form>
+      <div className={styles.footer}>
+        <p>™ Developed By MindSwap 2022</p>
+      </div>
     </div>
   );
 }
