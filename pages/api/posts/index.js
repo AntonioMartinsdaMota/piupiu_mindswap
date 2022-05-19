@@ -1,15 +1,20 @@
 import Post from "../../../models/Post";
 import dbConnect from "../../../utils/dbConnect";
+import User from "../../../models/User";
 
 dbConnect();
 
+
 export default async (req, res) => {
     const method = req.method;
-
+ 
     switch (method) {
+        
         case "GET":
+            
             try {
-                const posts = await Post.find();
+                const posts = await Post.find().populate("user", "name");
+                console.log(posts);
                 res.status(200).json({ success: true, data: posts });
             }
             catch (e) {
@@ -18,8 +23,19 @@ export default async (req, res) => {
             break;
         case "POST":
             try {
-                const post = await Post.create(req.body);
-                res.status(201).json({ success: true, data: post });
+                console.log(req.body);
+                const { content } = req.body;
+                const cookie = req.headers.cookie;
+                console.log(cookie);
+                const email = cookie.split("=")[1];
+                const user = await User.findOne({ email });
+                const name = user.name;
+                console.log(name);
+               
+
+
+                const post = await Post.create({ content, user });
+                res.status(200).json({ success: true, data: post });
             }
             catch (e) {
                 res.status(400).json({ success: false, error: e.message });
