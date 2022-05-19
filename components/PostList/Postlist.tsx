@@ -28,7 +28,7 @@ function PostList() {
               <div className={styles.comment} key={index}>
                 <h2 className={styles.h1}>{post.user.name}</h2>
                 <p>{post.content}</p>
-                {/* <a href={`api/posts/${post._id}`}> {post.comments.length} comments</a> */}
+                <a href={`postPage/${post._id}`}> {post.comments.length} comments</a>
               </div>
             ))}
         </div>
