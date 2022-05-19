@@ -22,6 +22,12 @@ const UserSchema = new mongoose.Schema({
     required: [true, "Please add a name"],
     maxlength: [50, "Name can not be more than 50 characters"],
   },
+
+  avatar: {
+    type: String,
+    default: "default.jpg",
+  },
+  
 });
 
 export default mongoose.models.User || mongoose.model("User", UserSchema);
