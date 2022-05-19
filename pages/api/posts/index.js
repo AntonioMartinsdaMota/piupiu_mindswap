@@ -10,12 +10,18 @@ export default async (req, res) => {
   switch (method) {
     case "GET":
       try {
-        const posts = await Post.find().populate("user", "name");
+        const posts = await Post.find()
+          .populate("user", "name")
+          .populate({
+            path: "comments",
+            populate: { path: "user" },
+          });
         console.log(posts);
         res.status(200).json({ success: true, data: posts });
       } catch (e) {
         res.status(400).json({ method: get, success: false, error: e.message });
       }
+
       break;
     case "POST":
       try {
