@@ -1,11 +1,15 @@
 import PostPage from "../../components/PostPage/Post.jsx";
-
+import CommentSubmitForm from "../../components/CommentSubmit/CommentSubmitForm.jsx";
 
 
 function Page(props){
     const { id } = props;
     return (
-        <PostPage id={id} />
+      <>
+       <PostPage id={id} />
+        <CommentSubmitForm id={id} />
+      </>
+       
     )
 }
 
@@ -17,6 +21,7 @@ const getServerSideProps = async (context) => {
     }
   };
 }
+
 
 
 export default Page;
