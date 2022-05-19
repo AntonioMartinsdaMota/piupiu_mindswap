@@ -1,5 +1,6 @@
 import styles from "./PostList.module.css";
 import { useState, useEffect } from "react";
+import LikeButton from "../LikeButton";
 
 function PostList() {
   const [posts, setPosts] = useState([]);
@@ -25,9 +26,14 @@ function PostList() {
             .reverse()
             .map((post, index) => (
               <div className={styles.comment} key={index}>
-                <h2 className={styles.h1}>{post.user.name}</h2>
+                <h2 className={styles.h1}>
+                  {post.user.name} <LikeButton />
+                </h2>
                 <p>{post.content}</p>
-                <a href={`postPage/${post._id}`}> {post.comments.length} comments</a>
+                <a href={`postPage/${post._id}`}>
+                  {" "}
+                  {post.comments.length} comments
+                </a>
               </div>
             ))}
         </div>
