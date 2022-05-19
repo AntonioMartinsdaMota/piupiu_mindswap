@@ -83,12 +83,12 @@ function LoginForm() {
               {loading ? "Loading..." : "Log in"}
             </button>
 
-            {error && <p className={styles.error}>{error}</p>}
-
             <a className={styles.btnSign} href="/signup">
               {" "}
               Don't have an account?
             </a>
+
+            {error && <p className={styles.error}>{error}</p>}
           </div>
         </form>
 
