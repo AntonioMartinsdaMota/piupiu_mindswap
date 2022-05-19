@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 const PostSchema = new mongoose.Schema({
 	title: {
 		type: String,
-		required: [true, "Please add a title"],
 		maxlength: [100, "Title can not be more than 100 characters"],
 	},
 	content: { type: String, required: [true, "Please add content"] },
