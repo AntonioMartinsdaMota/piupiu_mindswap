@@ -1,11 +1,18 @@
 import styles from "./Header.module.css";
 import { useState } from "react";
+import Router from "next/router";
 
 function PageHeader() {
   const [bar, setbar] = useState(false);
 
   function togle() {
     setbar(!bar);
+  }
+
+  function handleClick(e) {
+    e.preventDefault();
+    togle();
+    Router.push("/profile");
   }
 
   return (
@@ -37,6 +44,7 @@ function PageHeader() {
         />
         <img
           className={styles.icon}
+          onClick={handleClick}
           src="https://i.ibb.co/DYJjNyN/user.png"
           height={20}
           alt=""

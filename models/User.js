@@ -27,6 +27,12 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: "default.jpg",
   },
+  role: {
+    type: String,
+    enum: ["Speaker", "Admin", "Guest", "Student", "Teacher"],
+    default: "Speaker",
+  },
+  
   
 });
 
