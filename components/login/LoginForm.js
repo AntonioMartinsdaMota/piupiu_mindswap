@@ -1,4 +1,3 @@
-import { Session } from "inspector";
 import Router from "next/router";
 import { useState, useEffect } from "react";
 import styles from "./login.module.css";
@@ -12,12 +11,10 @@ function LoginForm() {
 
   useEffect(() => {
     if (loggedIn) {
-      setUsername(Session.username);
+      setUsername("");
       setPassword("");
     }
   }, [loggedIn]);
-
-  console.log(username);
   
   const handleSubmit = (e) => {
     e.preventDefault();
