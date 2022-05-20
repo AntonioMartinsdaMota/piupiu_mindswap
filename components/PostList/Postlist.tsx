@@ -26,8 +26,8 @@ function PostList() {
             .reverse()
             .map((post, index) => (
               <div className={styles.comment} key={index}>
-                
                 <h2 className={styles.h1}>
+
                 <img src={post.user.avatar} alt="avatar" />
                   {post.user.name} 
                   {post.user.role}
@@ -36,11 +36,25 @@ function PostList() {
                 <div>
                 <p> {post.likes.length} likes </p>
                 </div>
+
+                  <img
+                    className={styles.avatar}
+                    src={post.user.avatar}
+                    alt="avatar"
+                  />
+                  <span className={styles.userName}>{post.user.name}</span>
+                  <span className={styles.role}>{post.user.role}</span>
+                  <span className={styles.space}></span>
+                  <a
+                    className={styles.commentsCount}
+                    href={`postPage/${post._id}`}
+                  >
+                    {" "}
+                    {post.comments.length} Comments
+                  </a>
+                  <LikeButton />
+                </h2>
                 <p>{post.content}</p>
-                <a href={`postPage/${post._id}`}>
-                  {" "}
-                  {post.comments.length} comments
-                </a>
               </div>
             ))}
         </div>
