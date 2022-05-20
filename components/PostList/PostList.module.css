@@ -6,10 +6,13 @@
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
+  width: 92vw;
 }
 
 .comment {
   margin-bottom: 1%;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 .avatar {

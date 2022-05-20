@@ -52,7 +52,11 @@ function PostSubmitForm() {
           onChange={(e) => setContent(e.target.value)}
         />
         <button className={styles.submitButton} onClick={handleSubmit}>
-          <img src="https://i.ibb.co/hKyfFrs/botao.png" alt="" />
+          <img
+            className={styles.img}
+            src="https://i.ibb.co/hKyfFrs/botao.png"
+            alt=""
+          />
         </button>
       </form>
       <div className={styles.footer}>

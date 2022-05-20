@@ -23,19 +23,7 @@ function PageHeader() {
           height={47}
           alt=""
         />
-        <input
-          id="searchbar"
-          className={bar ? styles.search : styles.searchbar}
-          type="text"
-          placeholder="🔍  Search"
-        />
-        <img
-          className={styles.icon}
-          onClick={togle}
-          src="https://i.ibb.co/LNv9shj/search.png"
-          height={20}
-          alt=""
-        />{" "}
+
         <img
           className={styles.icon}
           src="https://i.ibb.co/Qd7Q4Vn/settings.png"
@@ -50,6 +38,12 @@ function PageHeader() {
           alt=""
         />
       </div>
+      <input
+        id="searchbar"
+        className={bar ? styles.search : styles.searchbar}
+        type="text"
+        placeholder="🔍  Search"
+      />
     </>
   );
 }
