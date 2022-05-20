@@ -32,7 +32,6 @@
   padding: 5px;
   align-items: center;
   border-top: 1px solid rgba(128, 128, 128, 0.647);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.647);
 }
 
 .like {
@@ -41,7 +40,7 @@
 }
 
 .role {
-  padding: 0.2%;
+  padding: 0.3%;
   border-radius: 10%;
   font-size: 50%;
   background-color: rgb(10, 105, 105);
@@ -58,10 +57,22 @@
 }
 
 .commentsCount {
+  height: 25px;
   font-size: 50%;
   align-self: flex-end;
   padding-right: 0.5%;
   text-decoration: none;
   color: grey;
-  margin-bottom: 0.6%;
+  margin-bottom: 0.9%;
+}
+
+.likes > a {
+  color: grey;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.commentsLenght {
+  text-decoration: none;
+  color: grey;
 }

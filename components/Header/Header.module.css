@@ -4,19 +4,10 @@
   justify-content: space-between;
   margin: 3% 2% 3% 4%;
   align-self: center;
-  flex-grow: 1;
 }
 
-.searchbar {
-  opacity: 0;
-  transition: 0.4s;
-  height: 20px;
-  align-self: center;
-  width: 100%;
-  margin-right: 20px;
-  border-radius: 22, 5px;
-  margin-left: 3%;
-  font-family: "Roboto", sans-serif;
+.span {
+  flex-grow: 1;
 }
 
 .search {
@@ -24,7 +15,7 @@
   transition: 0.4s;
   height: 45px;
   align-self: center;
-  width: 100%;
+  width: 80%;
   margin-right: 20px;
   border-radius: 20px;
   margin-left: 3%;
@@ -38,4 +29,17 @@
 
 .icon:hover {
   cursor: pointer;
+}
+
+.search::-webkit-input-placeholder {
+  color: #8493a8;
+  font-size: 16px;
+  /* padding-left: 15px; */
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.search {
+  padding-left: 15px;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 16px;
 }
