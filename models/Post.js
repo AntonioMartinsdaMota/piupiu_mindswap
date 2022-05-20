@@ -16,6 +16,11 @@ const PostSchema = new mongoose.Schema({
       user: { type: mongoose.Schema.ObjectId, ref: "User" },
     },
   ],
+  likes: [
+    {
+      user: { type: mongoose.Schema.ObjectId, ref: "User" },
+    },
+  ],
 });
 
 module.exports = mongoose.models.Post || mongoose.model("Post", PostSchema);

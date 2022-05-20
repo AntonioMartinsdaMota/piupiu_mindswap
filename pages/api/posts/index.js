@@ -15,9 +15,12 @@ export default async (req, res) => {
           .populate({
             path: "comments",
             populate: { path: "user" },
+          })
+          .populate({
+            path: "likes",
+            populate: { path: "user" },
           });
-      
-         
+        res.status(200).json({ success: true, data: posts });
         console.log(posts);
         res.status(200).json({ success: true, data: posts });
       } catch (e) {

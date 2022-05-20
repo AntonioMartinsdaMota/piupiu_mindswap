@@ -27,6 +27,16 @@ function PostList() {
             .map((post, index) => (
               <div className={styles.comment} key={index}>
                 <h2 className={styles.h1}>
+
+                <img src={post.user.avatar} alt="avatar" />
+                  {post.user.name} 
+                  {post.user.role}
+                  <LikeButton id={post._id}/>    
+                </h2>
+                <div>
+                <p> {post.likes.length} likes </p>
+                </div>
+
                   <img
                     className={styles.avatar}
                     src={post.user.avatar}
@@ -44,7 +54,6 @@ function PostList() {
                   </a>
                   <LikeButton />
                 </h2>
-
                 <p>{post.content}</p>
               </div>
             ))}
