@@ -17,6 +17,10 @@ function UpdateUserInfoForm(){
     const [about, setAbout] = useState('');
     const [isToggled, setIsToggled] = useState(false);
 
+    function refreshPage(){
+        window.location.reload();
+    }
+
     useEffect(() => {
         getUser().then(user => {
             setAvatar(user.avatar);
@@ -51,6 +55,9 @@ function UpdateUserInfoForm(){
             console.log(json);
             console.log("User info updated");
         });
+
+        refreshPage();
+
     }
 
     return (
