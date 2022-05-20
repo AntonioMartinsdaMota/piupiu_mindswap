@@ -56,7 +56,7 @@ function PostSubmitForm() {
         </button>
       </form>
       <div className={styles.footer}>
-        <p>™ Developed By MindSwap 2022</p>
+        <p>Powered by MindSwap</p>
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import styles from "../PostSubmit/PostSubmit.module.css";
 
 function CommentSubmitForm(props) {
-
   const { id } = props;
   const [content, setContent] = useState("");
 
@@ -17,9 +16,8 @@ function CommentSubmitForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(content);
-    
 
-    try{
+    try {
       fetch(`http://localhost:3000/api/posts/${id}`, {
         method: "PUT",
         headers: {
@@ -34,8 +32,7 @@ function CommentSubmitForm(props) {
           console.log(json);
           console.log("Comment submitted");
         });
-
-    } catch(err){
+    } catch (err) {
       console.log(err);
     }
 
@@ -56,7 +53,7 @@ function CommentSubmitForm(props) {
         </button>
       </form>
       <div className={styles.footer}>
-        <p>™ Developed By MindSwap 2022</p>
+        <p>™ Developed By MindSwap</p>
       </div>
     </div>
   );
