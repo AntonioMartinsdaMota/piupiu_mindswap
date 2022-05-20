@@ -24,6 +24,8 @@ function PageHeader() {
           alt=""
         />
 
+        <span className={styles.span}></span>
+
         <img
           className={styles.icon}
           src="https://i.ibb.co/Qd7Q4Vn/settings.png"
@@ -40,7 +42,7 @@ function PageHeader() {
       </div>
       <input
         id="searchbar"
-        className={bar ? styles.search : styles.searchbar}
+        className={styles.search}
         type="text"
         placeholder="🔍  Search"
       />
