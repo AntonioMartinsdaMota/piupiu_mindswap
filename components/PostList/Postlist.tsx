@@ -27,15 +27,10 @@ function PostList() {
             .map((post, index) => (
               <div className={styles.comment} key={index}>
                 <h2 className={styles.h1}>
-
-                <img src={post.user.avatar} alt="avatar" />
-                  {post.user.name} 
+                  {/* <img src={post.user.avatar} alt="avatar" /> */}
+                  {/* {post.user.name} 
                   {post.user.role}
-                  <LikeButton id={post._id}/>    
-                </h2>
-                <div>
-                <p> {post.likes.length} likes </p>
-                </div>
+                  <LikeButton id={post._id}/>     */}
 
                   <img
                     className={styles.avatar}
@@ -52,7 +47,10 @@ function PostList() {
                     {" "}
                     {post.comments.length} Comments
                   </a>
-                  <LikeButton />
+                  <div>
+                    <p> {post.likes.length} likes </p>
+                  </div>
+                  <LikeButton id={post._id} />
                 </h2>
                 <p>{post.content}</p>
               </div>
