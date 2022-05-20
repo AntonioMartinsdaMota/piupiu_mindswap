@@ -8,12 +8,15 @@ function Avatar (){
     async function getUser(){
         const response = await fetch("api/me");
         const json = await response.json();
-        setUser(json.data);
-        setAvatar(user.avatar);
+        const user = json.data;
+       return user
     }
 
     useEffect(() => {
-        getUser();
+        getUser().then(user => {
+            setUser(user)
+            setAvatar(user.avatar)
+        })
     }, []);
 
     return(

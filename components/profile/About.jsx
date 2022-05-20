@@ -21,9 +21,11 @@ function About () {
 
         <div>
             <h1>About</h1>
-            <p>{user.name}</p>
-            <p>{user.email}</p>
-
+    
+            <p>Username: <br/>{user.name} </p>
+            <p>Email: <br/>{user.email}</p>
+            <p>Role: <br/>{user.role}</p>
+            <p>About: <br/>{user.about}</p>
         </div>
 
     );

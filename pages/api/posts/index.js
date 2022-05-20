@@ -11,11 +11,13 @@ export default async (req, res) => {
     case "GET":
       try {
         const posts = await Post.find()
-          .populate("user", "name")
+          .populate("user", ["name", "avatar", "role"])
           .populate({
             path: "comments",
             populate: { path: "user" },
           });
+      
+         
         console.log(posts);
         res.status(200).json({ success: true, data: posts });
       } catch (e) {

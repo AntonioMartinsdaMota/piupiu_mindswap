@@ -27,6 +27,7 @@ export default async (req, res) => {
     case "PUT":
       try {
         const email = req.cookies.token;
+       
         const user = await User.findOne({ email });
         if (!user) {
           return res
@@ -34,20 +35,9 @@ export default async (req, res) => {
             .json({ success: false, error: "User not found" });
         }
 
-        const updatedUser = await User.findByIdAndUpdate(
-          user._id,
-          {
-            $push: {
-              avatar: req.body.avatar,
-              role: req.body.role,
-              name: req.body.name,
-              email: req.body.email,
-              password: req.body.password,
-              about: req.body.about
-            },
-          },
-          { new: true }
-        );
+        const updatedUser = await user.update(req.body);
+
+
         res.status(200).json({ success: true, data: updatedUser });
       } catch (e) {
         res.status(400).json({ success: false, error: e.message });

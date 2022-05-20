@@ -26,8 +26,12 @@ function PostList() {
             .reverse()
             .map((post, index) => (
               <div className={styles.comment} key={index}>
+                
                 <h2 className={styles.h1}>
-                  {post.user.name} <LikeButton />
+                <img src={post.user.avatar} alt="avatar" />
+                  {post.user.name} 
+                  {post.user.role}
+                  <LikeButton />       
                 </h2>
                 <p>{post.content}</p>
                 <a href={`postPage/${post._id}`}>
