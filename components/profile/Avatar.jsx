@@ -1,4 +1,6 @@
 import {useState, useEffect} from "react";
+import styles from "./Avatar.module.css";
+
 
 function Avatar (){
 
