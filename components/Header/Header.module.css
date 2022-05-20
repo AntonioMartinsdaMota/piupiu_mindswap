@@ -1,9 +1,10 @@
 .logo {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  margin: 3%;
+  justify-content: space-between;
+  margin: 3% 2% 3% 4%;
   align-self: center;
+  flex-grow: 1;
 }
 
 .searchbar {
