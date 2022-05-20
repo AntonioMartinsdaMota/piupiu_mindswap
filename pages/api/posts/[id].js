@@ -5,6 +5,8 @@ import User from "../../../models/User";
 dbConnect();
 
 export default async (req, res) => {
+
+
   const { id } = req.query;
   console.log(id);
 
@@ -16,7 +18,7 @@ export default async (req, res) => {
         const post = await Post.findById(id)
           .populate("user", "name")
           .populate("comments.user", "name");
-          console.log(post)
+          
 
         if (!post) {
           return res.status(404).json({
@@ -48,6 +50,15 @@ export default async (req, res) => {
             },
           },
         });
+
+        await Post.findByIdAndUpdate(id, {
+          $push: {
+            likes: {
+              user,
+            },
+          },
+        });
+
 
         if (!post) {
           return res.status(404).json({

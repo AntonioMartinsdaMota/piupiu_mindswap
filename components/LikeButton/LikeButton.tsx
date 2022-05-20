@@ -1,12 +1,31 @@
 import { useState } from "react";
 import styles from "./button.module.css";
 
-function LikeButton() {
+function LikeButton(props) {
   const [like, setLike] = useState(false);
+  const { id } = props;
 
   function toggle() {
     setLike(!like);
+    fetchData();
   }
+
+    async function fetchData() {
+      const postId = id;
+      const response = await fetch(`/api/posts/${postId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        
+      });
+return response.json();
+
+    }
+
+
+         
+  
 
   return (
     <button className={styles.like} onClick={toggle}>

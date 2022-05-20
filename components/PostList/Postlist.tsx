@@ -31,8 +31,11 @@ function PostList() {
                 <img src={post.user.avatar} alt="avatar" />
                   {post.user.name} 
                   {post.user.role}
-                  <LikeButton />       
+                  <LikeButton id={post._id}/>    
                 </h2>
+                <div>
+                <p> {post.likes.length} likes </p>
+                </div>
                 <p>{post.content}</p>
                 <a href={`postPage/${post._id}`}>
                   {" "}
