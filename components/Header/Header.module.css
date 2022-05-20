@@ -1,42 +1,40 @@
-.logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 3%;
-    align-self: center;
-
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 3%;
+  align-self: center;
 }
 
-.searchbar{
-    opacity: 0;
-    transition: 0.4s ;
-    height: 20px;
-    align-self: center;
-    width:100%;
-    margin-right: 20px;
-    border-radius: 22,5px;
-    margin-left: 3%;
-    font-family: 'Roboto', sans-serif;
+.searchbar {
+  opacity: 0;
+  transition: 0.4s;
+  height: 20px;
+  align-self: center;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 22, 5px;
+  margin-left: 3%;
+  font-family: "Roboto", sans-serif;
 }
 
-.search{
-    opacity: 1;
-    transition: 0.4s ;
-    height: 45px;
-    align-self: center;
-    width:100%;
-    margin-right: 20px;
-    border-radius: 20px;
-    margin-left: 3%;
-  
+.search {
+  opacity: 1;
+  transition: 0.4s;
+  height: 45px;
+  align-self: center;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 20px;
+  margin-left: 3%;
 }
 
-.icon{
-    align-self: center;
-    justify-self: center;
-    margin: 1%;
+.icon {
+  align-self: center;
+  justify-self: center;
+  margin: 1%;
 }
 
-.icon:hover{
-    cursor: pointer;
+.icon:hover {
+  cursor: pointer;
 }
