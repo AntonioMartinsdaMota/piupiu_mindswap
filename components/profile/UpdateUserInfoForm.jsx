@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import styles from './UpdateUserInfoForm.module.css';
 
 function getUser(){
     return fetch("api/me")
@@ -61,7 +62,7 @@ function UpdateUserInfoForm(){
     }
 
     return (
-        <div>
+        <div className={styles.box}>
             <button onClick={() => setIsToggled(!isToggled)}>
                 {isToggled ? "Hide" : "Update User Info"}
             </button>
