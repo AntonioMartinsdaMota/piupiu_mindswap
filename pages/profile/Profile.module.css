@@ -1,11 +1,38 @@
 .body {
-    background-color: pink;
+    background-color: #2e2d2d;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap : 20px;
+}
+
+.mainCard {
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    padding: 35px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 40px #ffffff25;
+    border-radius: 10px;
+    gap : 20px;
+    
+}
+
+.btnHome{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+
 }
 
 

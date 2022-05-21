@@ -15,27 +15,43 @@ function About() {
   }, []);
 
   return (
-    <div className={styles.cardLogin}>
-      <h1>About</h1>
-
-      <div>
+    <div className={styles.aboutCard}>
+      <div className={styles.aboutHeader}>
+        <p>info</p>
+      </div>
+<div className={styles.content}>
+      <div className={styles.label}>
         <p>
-          Username: <br />
-          {user.name}{" "}
+          username:
         </p>
         <p>
-          Email: <br />
+          e-mail:
+        </p>
+        <p>
+          role: 
+        </p>
+        <p>
+          about: 
+        </p>
+      </div>
+
+      <div className={styles.info}>
+        <p>
+          {user.name}
+        </p>
+        <p>
           {user.email}
         </p>
         <p>
-          Role: <br />
           {user.role}
         </p>
         <p>
-          About: <br />
           {user.about}
         </p>
-      </div>
+
+        </div>
+
+    </div>
     </div>
   );
 }

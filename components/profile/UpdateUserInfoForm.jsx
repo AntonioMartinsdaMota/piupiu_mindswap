@@ -63,40 +63,36 @@ function UpdateUserInfoForm(){
 
     return (
         <div className={styles.box}>
-            <button onClick={() => setIsToggled(!isToggled)}>
+            <button className={styles.btnLogin}onClick={() => setIsToggled(!isToggled)}>
                 {isToggled ? "Hide" : "Update User Info"}
             </button>
             {isToggled && (
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Avatar:
-                    <input type="text" value={avatar} onChange={e => setAvatar(e.target.value)} />
+            <form className={styles.updateForm} onSubmit={handleSubmit}>
+                <label className={styles.label}>
+                    avatar:
+                    <input className={styles.input} type="text" value={avatar} onChange={e => setAvatar(e.target.value)} />
                 </label>
-                <label>
-                    Role:
-                    <input type="text" value={role} onChange={e => setRole(e.target.value)} />
+                <label className={styles.label}>
+                    role:
+                    <input className={styles.input} type="text" value={role} onChange={e => setRole(e.target.value)} />
                 </label>
-                <label>
-                    Name:
-                    <input type="text" value={name} onChange={e => setName(e.target.value)} />
+                <label className={styles.label}>
+                    name:
+                    <input className={styles.input} type="text" value={name} onChange={e => setName(e.target.value)} />
                 </label>
-                <label>
-                    Email:
-                    <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                <label className={styles.label}>
+                    e-mail:
+                    <input className={styles.input} type="text" value={email} onChange={e => setEmail(e.target.value)} />
                 </label>
-                <label>
-                    Password:
-                    <input type="text" value={password} onChange={e => setPassword(e.target.value)} />
+                <label className={styles.label}>
+                    password:
+                    <input className={styles.input} type="text" value={password} onChange={e => setPassword(e.target.value)} />
                 </label>
-                <label>
-                    Password Confirm:
-                    <input type="text" value={passwordConfirm} onChange={e => setPasswordConfirm(e.target.value)} />
+                <label className={styles.label}>
+                    about:
+                    <input className={styles.input} type="text" value={about} onChange={e => setAbout(e.target.value)} />
                 </label>
-                <label>
-                    About:
-                    <input type="text" value={about} onChange={e => setAbout(e.target.value)} />
-                </label>
-                <button type="submit">Update</button>
+                <button className={styles.btnLogin} type="submit">Update</button>
             </form>
             )}
         </div>
