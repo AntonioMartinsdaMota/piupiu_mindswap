@@ -23,7 +23,7 @@ function Avatar (){
 
     return(
         <div className="avatar">
-            <img src={avatar} alt="avatar" />
+            <img className={styles.profileImage} src={avatar} alt="avatar" />
         </div>
     );
 
