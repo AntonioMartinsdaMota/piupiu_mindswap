@@ -93,7 +93,7 @@ function LoginForm() {
         </form>
 
         <footer className={styles.footer}>
-          <p>Powered by MindSwap</p>
+          <p>Powered by MindSwap 2022</p>
         </footer>
       </div>
     </div>

@@ -8,8 +8,10 @@ function Home() {
   return (
     <div className={style.main}>
       <PageHeader />
-      <PostSubmitForm />
       <PostList />
+      <div className={style.fixed}>
+        <PostSubmitForm />
+      </div>
     </div>
   );
 }

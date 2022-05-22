@@ -25,18 +25,8 @@ function Post(props) {
     setPostLoaded(true);
   }
 
-  // useEffect(() => {
-  //     fetch(`api/posts/${id}`)
-  //     .then(res => res.json())
-  //     .then(data => {
-  //         setPost(data);
-  //         setComments(data.comments);
-  //     })
-  // }, [id]);
-
   return (
     <>
-      {/* <div className={styles.boxCard}> */}
       {post && (
         <div className={styles.boxPost}>
           <div>
@@ -68,7 +58,6 @@ function Post(props) {
             ))}
         </div>
       )}
-      {/* </div> */}
     </>
   );
 }
