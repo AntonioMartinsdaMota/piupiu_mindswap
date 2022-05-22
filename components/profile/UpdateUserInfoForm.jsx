@@ -14,7 +14,6 @@ function UpdateUserInfoForm(){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [passwordConfirm, setPasswordConfirm] = useState('');
     const [about, setAbout] = useState('');
     const [isToggled, setIsToggled] = useState(false);
 
@@ -28,6 +27,7 @@ function UpdateUserInfoForm(){
             setRole(user.role);
             setName(user.name);
             setEmail(user.email);
+            setPassword(user.password);
             setAbout(user.about);
         });
     }
@@ -47,7 +47,6 @@ function UpdateUserInfoForm(){
                 name,
                 email,
                 password,
-                passwordConfirm,
                 about,
             }),
         })
@@ -86,7 +85,7 @@ function UpdateUserInfoForm(){
                 </label>
                 <label className={styles.label}>
                     password:
-                    <input className={styles.input} type="text" value={password} onChange={e => setPassword(e.target.value)} />
+                    <input className={styles.input} type="password" value={password} onChange={e => setPassword(e.target.value)} />
                 </label>
                 <label className={styles.label}>
                     about:
