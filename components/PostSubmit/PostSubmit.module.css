@@ -1,12 +1,12 @@
 .box {
-  position: fixed;
+  /* position: fixed; */
   width: 98vw;
   bottom: 0;
   display: flex;
   flex-direction: column;
   padding: 2%;
   justify-content: stretch;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: black;
   margin-left: 1%;
 }

@@ -1,0 +1,83 @@
+.boxCard {
+  background-color: #2e2d2d;
+  display: flex;
+  /* width: 100vw;
+  height: 100%; */
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxPost {
+  margin: 10px 0px;
+  justify-content: center;
+  align-content: center;
+  font-family: "Roboto Flex", sans-serif;
+  border: 5px solid white;
+  background-color: black;
+  display: flex;
+  width: 30vw;
+  height: 100%;
+  flex-direction: column;
+  /* align-items: center; */
+  color: white;
+  padding-bottom: 16px;
+  box-shadow: 0px 10px 40px #ffffff25;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.userNameMain {
+  /* background-color: green; */
+  font-weight: 100;
+  font-size: 80%;
+}
+
+.boxNameMain {
+  margin-top: 15px;
+  border: 2px solid white;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+/* .boxNameMain > span {
+  font-size: 80%;
+  font-weight: 100;
+} */
+
+.comments {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.commentsTitle {
+  font-size: 80%;
+}
+
+.h1 {
+  background-color: green;
+}
+
+.commentsUser {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.boxUser {
+  border-top: 1px solid rgba(128, 128, 128, 0.433);
+}
+
+.username {
+  font-size: 80%;
+  font-weight: 100;
+}
+
+.user {
+  font-size: 150%;
+}
