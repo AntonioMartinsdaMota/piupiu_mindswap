@@ -105,7 +105,7 @@ function SignUpForm() {
               {loading ? "Loading..." : "SIGN UP"}
             </button>
 
-            <a className={styles.btnSign} href="/signup">
+            <a className={styles.btnSign} href="/">
               {" "}
               I already have an account
             </a>
@@ -114,7 +114,7 @@ function SignUpForm() {
           </div>
         </form>
         <footer className={styles.footer}>
-          <p>Powered by MindSwap</p>
+          <p>Powered by MindSwap 2022</p>
         </footer>
 
         {/* {error && <div className="alert alert-danger">{error}</div>} */}
