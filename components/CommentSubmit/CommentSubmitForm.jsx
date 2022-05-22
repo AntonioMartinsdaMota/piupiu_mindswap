@@ -53,7 +53,7 @@ function CommentSubmitForm(props) {
         </button>
       </form>
       <div className={styles.footer}>
-        <p>™ Developed By MindSwap</p>
+        <p>Powered by MindSwap 2022</p>
       </div>
     </div>
   );

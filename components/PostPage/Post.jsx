@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
+import styles from "./post.module.css";
+// import styles from "./Avatar.module.css";
+// import avatar from "../profile/Avatar";
 
+// import avatar
 function Post(props) {
   const { id } = props;
 
@@ -32,20 +36,39 @@ function Post(props) {
 
   return (
     <>
+      {/* <div className={styles.boxCard}> */}
       {post && (
-        <div>
-          <h1>{post?.user?.name}</h1>
-          <p>{post?.content}</p>
-          <h2>Comments</h2>
+        <div className={styles.boxPost}>
+          <div>
+            <img
+              src="https://i.ibb.co/Kw0hNY6/logo-Final-Qualidade.png"
+              height={47}
+              alt=""
+            />
+          </div>
+
+          <div className={styles.boxNameMain}>
+            <h1 className={styles.userNameMain}>
+              Username: <span className={styles.user}>{post?.user?.name} </span>
+            </h1>
+            <p className={styles.comments}>{post?.content}</p>
+          </div>
+
+          <h2 className={styles.commentsTitle}>Comments: </h2>
           {comments &&
             comments.map((comment) => (
-              <div key={comment.id}>
-                <h3>{comment.user.name}</h3>
-                <p>{comment.content}</p>
+              <div className={styles.boxUser} key={comment.id}>
+                {" "}
+                <h3 className={styles.username}>
+                  Username:{" "}
+                  <span className={styles.user}> {comment.user.name} </span>
+                </h3>
+                <p className={styles.commentsUser}>{comment.content}</p>
               </div>
             ))}
         </div>
       )}
+      {/* </div> */}
     </>
   );
 }
