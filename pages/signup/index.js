@@ -1,10 +1,11 @@
 import SignUpForm from "../../components/Signup/SignupForm";
+// import styles from "./signUp.module.css";
 
 function SignUp() {
   return (
     <>
+      {/* className={styles.bodySignup} */}
       <div id="singup">
-        {/* <img src="https://i.ibb.co/3c94bFF/logo.png" height={75} alt="" /> */}
         <SignUpForm />
       </div>
     </>
